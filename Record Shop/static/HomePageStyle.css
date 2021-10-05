@@ -1,0 +1,17 @@
+
+h1 {
+    text-align: center;
+    /* background-color: whitesmoke; */
+}
+h3 {
+    text-align: left;
+}
+
+.searchbutton {
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+}

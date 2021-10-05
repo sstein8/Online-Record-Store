@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Disco Albums</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: rgb(222, 255, 168);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Disco Albums</h1>
+    <br>
+    <a href="/">
+      <button type="button" class="btn btn-secondary">Go To Home</button>
+    </a><br>
+    <br>
+    {{ATCmessage}}
+    <br>
+    <form method="POST" action="/disco">
+      Saturday Night Fever<br>
+      <img src="/static/AlbumCovers/SNF.jpg" width="150" height="150"> <br>
+      Artist: Bee Gees<br>
+      Price: $30.74<br>
+      <p>Composed and performed by the Bee Gees, this groovy double album holds 17 songs from the title Movie.</p>
+
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+     
+      <input type="hidden" name="pname" value="Saturday Night Fever"/>
+      <input type="hidden" name="productID" value="10"/>
+      <input type="hidden" name="price" value="30.74"/> 
+      <input name="SAform" type="submit" value="Add to cart"/>
+    </form>
+    <br>
+    <br>
+
+    <form method="POST" action="/disco">
+      I Am<br>
+      <img src="/static/AlbumCovers/IAm.jpg" width="150" height="150"> <br>
+      Artist: Earth, Wind & Fire<br>
+      Price: $26.44<br>
+      <p>I Am is the ninth studio album released by Earth Wind & Fire and was released in June 1979.</p>
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+     
+      <input type="hidden" name="pname" value="I Am"/>
+      <input type="hidden" name="productID" value="11"/>
+      <input type="hidden" name="price" value="26.44"/> 
+      <input name="SAform" type="submit" value="Add to cart"/>
+    </form>
+    <br>
+    <br>
+
+    <form method="POST" action="/disco">
+      We Are Family<br>
+      <img src="/static/AlbumCovers/WAF.jpg" width="150" height="150"> <br>
+      Artist: Sister Sledge<br>
+      Price: $25.50<br>
+      <p>We Are Family is the third studio album released by the vocal group, Sister Sledge, and produced by Nile Rodgers and Bernard Edwards of Chic.</p>
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+     
+      <input type="hidden" name="pname" value="We Are Family"/>
+      <input type="hidden" name="productID" value="12"/>
+      <input type="hidden" name="price" value="25.50"/> 
+      <input name="SAform" type="submit" value="Add to cart"/>
+    </form>
+  </body>
+</html>

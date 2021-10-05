@@ -1,0 +1,73 @@
+
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/HomePageStyle.css" media="screen"/>
+    <style>
+      body {
+        background-image: url('/static/AlbumCovers/Square_Records.png');
+      }
+      </style>
+  </head>
+  <body>
+    <h1 style="background-color: whitesmoke; color:cadetblue;">Murray Hill Vinyl</h1>
+
+    <div class="searchbutton">
+      <form action="/search" method="POST" id="form" role="search">
+        <input type="search" id="query" name="searchWord"
+        placeholder="Search for album title"
+        aria-label="Search for album title">
+        <input name="searchbutton" type="submit" value="Search"/>
+      </form>
+    </div>
+  {{notInStock}}
+  <br>
+  
+
+    <a href="/login">
+      <button type="button" class="btn btn-secondary">Log In</button>
+    </a>  
+    <br>
+    <a href="/signup">
+      <button type="button" class="btn btn-secondary">Sign Up</button>
+    </a>  
+    <br>
+    <a href="/logout">
+      <button type="button" class="btn btn-secondary">Log Out</button>
+    </a>  
+    <br>
+    <a href="/cart">
+      <button type="button" class="btn btn-secondary">Cart</button>
+    </a> 
+    <br> 
+    
+    <span style="color: black; background-color:lightskyblue" >{{message}}</span>
+
+    <br>
+    <h2 style="background-color: whitesmoke;">Welcome to the shop!  Here at Murray Hill Vinyl, we sell a wide variety of records, all the way from rock to hip-hop.  Take a look around and see what you like.</h2>
+
+    <span style="color:rgb(182, 241, 127); font-size:x-large">Genres</span>
+    <br>
+    
+    <a href="/rock">
+      <button type="button" class="btn btn-secondary">Rock</button>
+    </a>
+    <br>
+    <a href="/disco">
+      <button type="button" class="btn btn-secondary">Disco</button>
+    </a>
+    <br>
+    <a href="/pop">
+      <button type="button" class="btn btn-secondary">Pop</button>
+    </a>
+    <br>
+    <a href="/hiphop">
+      <button type="button" class="btn btn-secondary">Hip-Hop</button>
+    </a>
+    <br>
+    <span style="color: black; background-color:lightskyblue" >{{byemessage}}</span>
+
+
+  </body>
+</html> 

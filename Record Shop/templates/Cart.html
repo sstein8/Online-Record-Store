@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/CartStyle.css" media="screen"/>
+    <style>
+      body {
+        background-color:rgb(201, 226, 248);
+      }
+    </style>
+  </head>
+  <body>
+      <h1>Cart</h1> <a href="/"><button type="button" class="btn btn-secondary">Go To Home</button>
+      </a>
+      <br>
+      <br>
+      {{byemessage}}
+        <table style="width:100%">
+          <thead>
+            <tr>
+              <th>Album Title</th>
+              <th>Quantity Selected</th>
+              <th>Sum Price</th>
+              <th>Remove From Cart</th>
+              <th>Change Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in table %}
+            <tr>
+              <td>{{row[0]}}</td>
+              <td>{{row[1]}}</td>
+              <td>{{row[2]}}</td>
+              <td>
+                <form method="POST", action="/remove_from_cart">
+                  <input type="hidden" name="pname" value="{{row[0]}}"/>
+                  <input name="form" type="submit" value="X"/>
+                </form>
+              </td>
+              <td>
+                <form method="POST" action="/edit_cart">
+                  <input type="text" name="changeQuantity">
+                  <input type="hidden" name="pname" value="{{row[0]}}"/>
+                  <input type="submit" name="submit">
+                </form>
+              </td>
+            </tr>
+            {% endfor %}
+            
+          </tbody>
+        </table>
+        <br>
+
+        Total Price: {{totalPrice}}
+        <br>
+        <a href="/checkout">
+          <!-- <button>Checkout</button> -->
+          <button type="button" class="btn btn-secondary">Checkout</button>
+        </a>
+
+  
+  </body>
+</html>

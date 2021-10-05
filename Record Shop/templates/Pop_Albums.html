@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Pop Albums</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: lightsteelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pop Albums</h1>
+    <br>
+    <a href="/">
+      <button type="button" class="btn btn-secondary">Go To Home</button>
+    </a>
+    <br>
+    {{ATCmessage}}
+    <br>
+
+    <form method="POST" action="/pop">
+      Room For Squares<br>
+      <img src="/static/AlbumCovers/RoomForSquares.jpg" width="150" height="150"> <br>
+      Artist: John Mayer<br>
+      Price: $17.25<br>
+      <p>Room For Squares is singer-songwriter John Mayer's debut studio album, earing him his first grammy for the single "Your Body Is a Wonderland".</p>
+
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+
+      <input type="hidden" name="pname" value="Room For Squares"/>
+      <input type="hidden" name="productID" value="4"/>
+      <input type="hidden" name="price" value="17.25"/>
+      <input name="form" type="submit" value="Add to cart"/>
+    </form>
+    <br>
+    <br>
+
+    <form method="POST" action="/pop">
+      It Won't Be Soon Before Long<br>
+      <img src="/static/AlbumCovers/Maroon5.jpg" width="150" height="150"> <br>
+      Artist: Maroon 5<br>
+      Price: $14.50<br>
+      <p>Released in 2007, It Won't Be Soon Before Long is Maroon 5's second studio album and debuted at number 1 on the U.S. Billboard 200.</p>
+
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+
+      <input type="hidden" name="pname" value="It Wont Be Soon Before Long"/>
+      <input type="hidden" name="productID" value="5"/>
+      <input type="hidden" name="price" value="14.50"/>
+      <input name="form" type="submit" value="Add to cart"/>
+    </form>
+    <br>
+    <br>
+
+    <form method="POST" action="/pop">
+      The E.N.D<br>
+      <img src="/static/AlbumCovers/TheEND.jpg" width="150" height="150"> <br>
+      Artist: Black Eyed Peas<br>
+      Price: $12.75<br>
+      <p>Short for "The Energy Never Dies", The E.N.D is the Blac Eyed Peas' fifth studio album, released in 2009.  This album earned the group a grammy for Best Pop Vocal Album.</p>
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+
+      <input type="hidden" name="pname" value="The END"/>
+      <input type="hidden" name="productID" value="6"/>
+      <input type="hidden" name="price" value="12.75"/>
+      <input name="form" type="submit" value="Add to cart"/>
+    </form>
+    <br>
+    <br>
+  </body>
+</html>

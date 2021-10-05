@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Hip-Hop Albums</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: rgb(255, 145, 145);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hip-Hop Albums</h1>
+    <br>
+    <a href="/">
+      <!-- <button>Go To Home</button> -->
+      <button type="button" class="btn btn-secondary">Go To Home</button>
+    </a>
+    <br>
+    {{ATCmessage}}
+    <br>
+    <form method="POST" action="/hiphop">
+      Graduation<br>
+      <img src="/static/AlbumCovers/Graduation.jpg" width="150" height="150"> <br>
+      Artist: Kanye West<br>
+      Price: $15.00<br>
+      <p>Released in 2007 through Def Jam Recordings and Roc-A-Fella Records, Graduation is Kanye West's third studio album.</p>
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+
+      <input type="hidden" name="pname" value="Graduation"/>
+      <input type="hidden" name="productID" value="7"/>
+      <input type="hidden" name="price" value="15.00"/>
+      <input name="form" type="submit" value="Add to cart"/>
+    </form>
+    <br>
+    <br>
+
+    <form method="POST" action="/hiphop">
+      Pink Friday<br>
+      <img src="/static/AlbumCovers/PinkFriday.jpg" width="150" height="150"> <br>
+      Artist: Nicki Minaj<br>
+      Price: $16.39<br>
+      <p>Pink Friday is Nicki Minaj's debut album released in 2010 and features one of her most popular hits, "Super Bass".</p>
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+
+      <input type="hidden" name="pname" value="Pink Friday"/>
+      <input type="hidden" name="productID" value="8"/>
+      <input type="hidden" name="price" value="16.39"/>
+      <input name="form" type="submit" value="Add to cart"/>
+    </form>
+    <br>
+    <br>
+
+    <form method="POST" action="/hiphop">
+      Ready To Die<br>
+      <img src="/static/AlbumCovers/ReadyToDie.jpg" width="150" height="150"> <br>
+      Artist: The Notorious B.I.G.<br>
+      Price: $24.58<br>
+      <p>Ready To Die is the debut album by late rapper, The Notorious B.I.G, released in 1994 by Bad Boy Records and Arista Records.</p>
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+
+      <input type="hidden" name="pname" value="Ready To Die"/>
+      <input type="hidden" name="productID" value="9"/>
+      <input type="hidden" name="price" value="24.58"/>
+      <input name="form" type="submit" value="Add to cart"/>
+    </form>
+  </body>
+</html>

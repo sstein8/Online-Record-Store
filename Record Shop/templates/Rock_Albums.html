@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Rock Albums</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: lightcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rock Albums</h1>
+    <br>
+    <a href="/">
+      <button type="button" class="btn btn-secondary">Go To Home</button>
+    </a>
+    <br>
+
+    {{ATCmessage}}
+    <br>
+    <form method="POST" action="/rock"> <!--Form for each album-->
+      Stadium Arcadium<br>
+      <img src="/static/AlbumCovers/StadiumArcadium.jpeg" width="150" height="150"> <br>
+      Artist: Red Hot Chili Peppers<br>
+      Price: $35.00<br>
+      <p>Winner of 5 grammy awards, Stadium Arcadium is the Red Hot Chili Pepper's ninth studio album and only double album.  This is the last album of the band to feature guitarist, John Frusciante.</p>
+
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+      
+      <input type="hidden" name="pname" value="Stadium Arcadium"/>
+      <input type="hidden" name="productID" value="1"/>
+      <input type="hidden" name="price" value="35.00"/> 
+      <input name="SAform" type="submit" value="Add to cart"/>
+    </form>
+    <br>
+    <br>
+
+    <form method="POST" action="/rock">
+      Wasting Light<br>
+      <img src="/static/AlbumCovers/WastingLight.jpg" width="150" height="150"> <br>
+      Artist: Foo Fighters<br>
+      Price: $24.99<br>
+      <p>Wasting Light is the Foo Fighters' seventh studio album, released in 2011.  The entire album was recorded using only analog equipment in the garage of frontman, Dave Grohl's house.</p>
+
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+      
+      <input type="hidden" name="pname" value="Wasting Light"/>
+      <input type="hidden" name="productID" value="2"/>
+      <input type="hidden" name="price" value="24.99"/>
+      <input name="WLform" type="submit" value="Add to cart"/>
+    </form>
+    <br>
+    <br>
+
+    <form method="POST" action="/rock">
+      Rumours<br>
+      Artist: Fleetwood Mac<br>
+      <img src="/static/AlbumCovers/Rumours.png" width="150" height="150"> <br>
+      Price: $23.99<br>
+      <p>Released in 1977, Rumours is the eleventh studio album released by British-American rock group, Fleetwood Mac.  Over 10 million copies were sold within one month of it's release.</p>
+
+      <label for="quantity">Choose Quantity: </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="5">
+
+      <input type="hidden" name="pname" value="Rumours"/>
+      <input type="hidden" name="productID" value="3"/>
+      <input type="hidden" name="price" value="23.99"/>
+      <input name="Rform" type="submit" value="Add to cart"/>
+    </form>
+  </body>
+</html>
